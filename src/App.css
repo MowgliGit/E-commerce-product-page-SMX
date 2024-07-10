@@ -1,6 +1,4 @@
-/* # Front-end Style Guide
-
-## Layout
+/*## Layout
 
 The designs were created to the following widths:
 
@@ -33,6 +31,16 @@ The designs were created to the following widths:
 
 - Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
 - Weights: 400, 700 */
+/* --- 06 BORDER-RADIUS
+-Default:;
+Medium:;
+--- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+--- 07 WHITE SPASE
+ - SPACING SYSTEM (px)
+   2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap");
 * {
@@ -43,49 +51,29 @@ The designs were created to the following widths:
 body {
   font-family: "Kumbh Sans", sans-serif;
   font-weight: 400;
+}
+html {
+  /* 10 / 16 = 0.625 * 100 = 62.5 */
+  /* overflow-x: hidden;
+     font-size: 62.5%; */
+}
+.app {
   max-width: 1440px;
   margin: 0 auto;
 }
-html {
+.html {
   font-size: 16px;
 }
-nav {
+/* HEADER */
+header {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 0;
+  padding: 30px 10px;
   cursor: pointer;
   border-bottom: 2px solid hsl(223, 64%, 98%);
-}
-.navigation {
-  display: flex;
-  gap: 80px;
-}
-.logo {
-  width: 150px;
-  height: 20px;
-}
-ul {
-  list-style: none;
-
-  color: hsl(220, 14%, 75%);
-  display: flex;
-  gap: 25px;
-  align-self: center;
-}
-a {
-  text-decoration: none;
-}
-a:link {
-  color: hsl(217, 9%, 45%);
-}
-a:hover,
-a:visited {
-  color: hsl(220, 13%, 13%);
-  border-bottom: 3px solid hsl(26, 100%, 55%);
-  padding-bottom: 45px;
 }
 .userBar {
   display: flex;
@@ -98,106 +86,146 @@ a:visited {
   border-radius: 50%;
   border: solid 2px hsl(26, 100%, 55%);
 }
-.mainContainer {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 100px 0;
-  display: flex;
-  gap: 30px;
+/* END OF HEADER */
+/* NAVIGATION */
+.logo {
+  width: 150px;
+  height: 20px;
 }
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+.list {
+  list-style: none;
+  color: hsl(220, 14%, 75%);
+  display: flex;
+  gap: 25px;
+  align-self: center;
+}
+a:link {
+  text-decoration: none;
+  font-size: 16px;
+  color: hsl(217, 9%, 45%);
+}
+a:hover,
+a:visited {
+  color: hsl(220, 13%, 13%);
+  border-bottom: 3px solid hsl(26, 100%, 55%);
+  padding-bottom: 45px;
+}
+/*END OF  NAVIGATION */
+/* MAIN  */
+.mainContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 80px;
+}
+/* GALLERY */
 .galleryCard {
+  padding: 10px;
   display: flex;
   flex-direction: column;
+  row-gap: 30px;
 }
-.main-image {
-  width: 350px;
-  height: 350px;
+.mainImage {
+  width: 100%;
+  height: auto;
   border-radius: 10px;
-  margin-bottom: 30px;
   cursor: pointer;
+  transition: all 0.4s;
 }
-.main-image-open {
-  width: 350px;
-  height: 350px;
-  border-radius: 10px;
-  position: relative;
-  cursor: pointer;
-}
-.other-images-open {
-  padding: 30px 30px 0 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.other-images {
-  padding: 30px 0 0 0;
+/* small image bellow main image */
+.otherImages {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .image {
   width: 70px;
-  height: 70px;
+  height: auto;
+  cursor: pointer;
+  display: block;
   border-radius: 10px;
+  transition: all 0.4s;
+  overflow: hidden;
+  outline: 2px solid transparent;
 }
-.image-open {
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
+.image:hover {
+  opacity: 0.8;
 }
-.other-image:hover,
-.other-image:visited {
-  border: 2px solid hsl(26, 100%, 55%);
+.active {
+  opacity: 0.5;
+  outline-color: hsl(26, 100%, 55%);
 }
-.lightbox-overlay {
+/* END OF GALLERY */
+/* LIGHTBOX */
+.lightBoxOverlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: hsl(220, 13%, 13%, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-.lightbox {
-  padding-top: 30px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.lightbox-close {
-  position: absolute;
-  top: 0;
+  max-width: 100%;
+  max-height: 100%;
+  top: 0px;
+  left: 0px;
   right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.lightBox {
+  background-color: transparent;
+  max-width: 50%;
+  padding: 20px;
+  position: relative;
+  padding: 25px 0px 10px 0px;
+}
 
+.mainImageLightBox {
+  width: 390px;
+  height: 390px;
+  border-radius: 10px;
+}
+
+.lightboxClose {
+  position: absolute;
+  top: 0px;
+  right: 10px;
   background: none;
   border: none;
-  font-size: 24px;
   cursor: pointer;
   fill: #fff;
 }
-.lightbox-close:hover {
+.contentLightBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px !important;
+  align-items: center;
+  padding: 30px 0px 0px 0px;
+}
+.mainImageContentLightBox .image {
+  display: block;
+  width: 65px;
+  height: 65px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.lightboxClose:hover {
   fill: hsl(26, 100%, 55%);
   stroke: hsl(26, 100%, 55%);
 }
-.lightbox .main-image {
-  width: 600px;
-  height: 600px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  position: absolute;
+/* ICONS */
+.mainImageContentLightBox {
+  position: relative;
 }
-.icon-previous:hover,
-.icon-next:hover {
-  fill: hsl(26, 100%, 55%) !important;
-  stroke: hsl(26, 100%, 55%) !important;
-}
-
 .icon-previous,
 .icon-next {
   display: flex;
@@ -208,18 +236,6 @@ a:visited {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  font-size: 8px;
-}
-svg {
-  transform: scale(0.8);
-}
-.main-box {
-  position: relative;
-}
-svg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .icon-previous,
 .icon-next {
@@ -231,12 +247,115 @@ svg {
 }
 .icon-previous {
   left: 0;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -100%);
 }
 .icon-next {
   right: 0;
-  transform: translate(50%, -50%);
+  transform: translate(50%, -100%);
 }
-.active {
-  background-color: rgba(255, 255, 255, 0.5); /* Transparent white background */
+.icon-previous:hover,
+.icon-next:hover {
+  fill: hsl(26, 100%, 55%) !important;
+  stroke: hsl(26, 100%, 55%) !important;
 }
+/* END OF ICONS */
+/* CARD */
+.card {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+.card-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-start;
+}
+.card-box-shorttitle {
+  text-transform: uppercase;
+  color: hsl(26, 100%, 55%);
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+.card-box-title {
+  font-weight: 600;
+  font-size: 35px;
+  letter-spacing: -0.8px;
+  margin-bottom: 15px;
+}
+.card-box-text {
+  color: hsl(219, 9%, 45%);
+  font-family: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.box-prices {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.prices {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.bold-price {
+  font-weight: 700;
+  font-size: 22px;
+}
+.color-price {
+  color: hsl(26, 100%, 55%);
+  font-weight: 600;
+  background-color: hsl(25, 100%, 94%);
+  width: 45px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.price span {
+  color: hsl(220, 14%, 75%);
+  font-weight: 600;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+.boxWithButtons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+}
+.button-plus,
+.button-minus,
+.number {
+  background-color: hsl(223, 64%, 98%);
+  width: 40px;
+  height: 40px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addToCard {
+  background-color: hsl(26, 100%, 55%);
+  padding: 10px 50px;
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.cardButton {
+  fill: #fff !important;
+  stroke: #fff !important;
+  width: 15px;
+  height: 15px;
+}
+/* END OF CART */
