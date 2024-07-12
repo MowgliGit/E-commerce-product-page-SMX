@@ -1,12 +1,10 @@
 import Gallery from "./Gallery";
-import Card from "./Card";
-export default function Main() {
+import Item from "./Item";
+export default function Main({ addToCart }) {
   return (
-    <>
-      <div className="mainContainer">
-        <Gallery />
-        <Card />
-      </div>
-    </>
+    <div className="mainContainer">
+      <Gallery />
+      <Item addToCart={addToCart} />
+    </div>
   );
 }

@@ -1,4 +1,4 @@
-export default function Navbar() {
+export default function Navbar({ cartCount, toggleCartVisibility }) {
   const menu = [
     {
       id: 1,
@@ -40,11 +40,14 @@ export default function Navbar() {
           </ul>
         </div>
         <div className="userBar">
-          <img
-            src="./images/icon-cart.svg"
-            className="icon-cart"
-            alt="icon cart"
-          />
+          <div className="cart" onClick={toggleCartVisibility}>
+            <img
+              src="./images/icon-cart.svg"
+              className="icon-cart"
+              alt="icon cart"
+            />
+            {cartCount > 0 && <span className="cartCount">{cartCount}</span>}
+          </div>
           <img src="./images/image-avatar.png" className="user" alt="avatar" />
         </div>
       </header>

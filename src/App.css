@@ -52,17 +52,13 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   font-weight: 400;
 }
-html {
-  /* 10 / 16 = 0.625 * 100 = 62.5 */
-  /* overflow-x: hidden;
-     font-size: 62.5%; */
+.html {
+  font-size: 16px;
 }
+/* APP ENTIRE WIDTH*/
 .app {
   max-width: 1440px;
   margin: 0 auto;
-}
-.html {
-  font-size: 16px;
 }
 /* HEADER */
 header {
@@ -79,6 +75,10 @@ header {
   display: flex;
   align-items: center;
   gap: 40px;
+  position: relative;
+}
+.icon-cart {
+  cursor: pointer;
 }
 .user {
   width: 50px;
@@ -125,6 +125,7 @@ a:visited {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 80px;
+  position: relative;
 }
 /* GALLERY */
 .galleryCard {
@@ -186,13 +187,11 @@ a:visited {
   position: relative;
   padding: 25px 0px 10px 0px;
 }
-
 .mainImageLightBox {
   width: 390px;
   height: 390px;
   border-radius: 10px;
 }
-
 .lightboxClose {
   position: absolute;
   top: 0px;
@@ -259,7 +258,7 @@ a:visited {
   stroke: hsl(26, 100%, 55%) !important;
 }
 /* END OF ICONS */
-/* CARD */
+/* CARD ITEM */
 .card {
   padding: 10px;
   display: flex;
@@ -288,7 +287,7 @@ a:visited {
 }
 .card-box-text {
   color: hsl(219, 9%, 45%);
-  font-family: 18px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -318,7 +317,7 @@ a:visited {
 }
 .price span {
   color: hsl(220, 14%, 75%);
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: line-through;
   font-size: 14px;
 }
@@ -341,21 +340,109 @@ a:visited {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .addToCard {
   background-color: hsl(26, 100%, 55%);
   padding: 10px 50px;
   color: #fff;
+  fill: #fff;
+  stroke: #fff;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 15px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: center;
 }
 .cardButton {
   fill: #fff !important;
   stroke: #fff !important;
+  color: #fff;
   width: 15px;
   height: 15px;
+  cursor: pointer;
+  filter: invert(100%);
 }
-/* END OF CART */
+/* END OF CART ITEM*/
+/* SHOPPING CART */
+.cartCount {
+  position: absolute;
+  top: 5px;
+  right: 80px;
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 12px;
+  padding: 2px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cartContainer {
+  position: absolute;
+  right: 60px;
+  top: -14px;
+  background-color: white;
+  border: 1px solid hsl(223, 64%, 98%);
+  width: 350px;
+  height: 220px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+  transform: translate(0%, 50%);
+  border-radius: 10px;
+}
+/* when card is empty */
+.emptyTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: hsl(220, 13%, 13%);
+  margin-bottom: 10px;
+  padding: 15px 20px;
+}
+.emptyText {
+  text-align: center;
+  font-size: 16px;
+  padding: 40px 40px;
+  color: hsl(219, 9%, 45%);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+hr {
+  border-top: solid 1px hsl(223, 64%, 98%) !important;
+}
+/*When card is not empty  */
+.cartDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 15px;
+}
+.cartProduct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.cartImg {
+  width: 50px;
+  height: 50px;
+}
+.productInfo {
+  flex-grow: 1;
+  margin-left: 10px;
+  color: hsl(219, 9%, 45%);
+  align-items: flex-start;
+}
+.garbageIcon {
+  border: none;
+  background: none;
+  font-size: 25px;
+}
+/* END OF SHOPPING CART */
