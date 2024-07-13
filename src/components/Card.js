@@ -36,7 +36,6 @@ export default function Card({ cartItems, removeFromCart, handleCheckout }) {
         )}
         {cartItems.length > 0 && (
           <button className="addToCard" onClick={handleCheckout}>
-            {" "}
             CheckOut
           </button>
         )}
