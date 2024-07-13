@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Card({ cartItems, removeFromCart, handleCheckout }) {
+  console.log(cartItems, "catttt");
   return (
     <div className="cartContainer">
       <h2 className="emptyTitle">Cart</h2>
