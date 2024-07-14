@@ -61,8 +61,8 @@ function App() {
       {isCartVisible && (
         <Card
           cartItems={cartItems}
-          removeFromCart={removeFromCart}
           handleCheckout={handleCheckout}
+          removeFromCart={removeFromCart}
         />
       )}
     </div>

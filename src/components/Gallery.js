@@ -127,7 +127,7 @@ export default function Gallery() {
                       </button>
                       <button className="icon-next" onClick={handleNextImage}>
                         <svg
-                          width="12"
+                          width="13"
                           height="18"
                           xmlns="http://www.w3.org/2000/svg"
                         >
