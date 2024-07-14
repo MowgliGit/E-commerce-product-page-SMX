@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/MowgliGit/E-commerce-product-page-SMX.git/static/css/main.dcb61ea6.css",
-    "main.js": "/MowgliGit/E-commerce-product-page-SMX.git/static/js/main.ee2c5cf8.js",
-    "static/js/453.5e560239.chunk.js": "/MowgliGit/E-commerce-product-page-SMX.git/static/js/453.5e560239.chunk.js",
-    "index.html": "/MowgliGit/E-commerce-product-page-SMX.git/index.html",
-    "main.dcb61ea6.css.map": "/MowgliGit/E-commerce-product-page-SMX.git/static/css/main.dcb61ea6.css.map",
-    "main.ee2c5cf8.js.map": "/MowgliGit/E-commerce-product-page-SMX.git/static/js/main.ee2c5cf8.js.map",
-    "453.5e560239.chunk.js.map": "/MowgliGit/E-commerce-product-page-SMX.git/static/js/453.5e560239.chunk.js.map"
+    "main.css": "/MowgliGit/E-commerce-product-page-SMX/static/css/main.dcb61ea6.css",
+    "main.js": "/MowgliGit/E-commerce-product-page-SMX/static/js/main.4a1bf78d.js",
+    "static/js/453.5e560239.chunk.js": "/MowgliGit/E-commerce-product-page-SMX/static/js/453.5e560239.chunk.js",
+    "index.html": "/MowgliGit/E-commerce-product-page-SMX/index.html",
+    "main.dcb61ea6.css.map": "/MowgliGit/E-commerce-product-page-SMX/static/css/main.dcb61ea6.css.map",
+    "main.4a1bf78d.js.map": "/MowgliGit/E-commerce-product-page-SMX/static/js/main.4a1bf78d.js.map",
+    "453.5e560239.chunk.js.map": "/MowgliGit/E-commerce-product-page-SMX/static/js/453.5e560239.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dcb61ea6.css",
-    "static/js/main.ee2c5cf8.js"
+    "static/js/main.4a1bf78d.js"
   ]
 }
