@@ -1,8 +1,11 @@
 import Navbar from "./Navbar";
-export default function Header() {
+export default function Header({ cartCount, toggleCartVisibility }) {
   return (
     <>
-      <Navbar />
+      <Navbar
+        cartCount={cartCount}
+        toggleCartVisibility={toggleCartVisibility}
+      />
     </>
   );
 }
