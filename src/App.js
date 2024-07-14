@@ -48,6 +48,10 @@ function App() {
 
   const handleCheckout = () => {
     setIsCartVisible(false);
+<<<<<<< HEAD
+=======
+    setCartItems([]);
+>>>>>>> 24288796cade1cb57f3396ffda149a0ab9c08ad0
     setCartCount(0);
   };
 

@@ -1,46 +1,4 @@
-import React, { useState, useEffect } from "react";
-function Navbar({ cartCount, toggleCartVisibility }) {
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 768);
-  const [open, setOpen] = useState(false);
-  const updateOpen = () => {
-    setOpen(!open);
-  };
-  const updateMedia = () => {
-    setDesktop(window.innerWidth > 768);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
-  });
-
-  const menu = [
-    {
-      id: 1,
-      title: "Collections",
-      link: "#collections",
-    },
-    {
-      id: 2,
-      title: "Men",
-      link: "#men",
-    },
-    {
-      id: 3,
-      title: "Women",
-      link: "#women",
-    },
-    {
-      id: 4,
-      title: "About",
-      link: "#about",
-    },
-    {
-      id: 5,
-      title: "Contact",
-      link: "#contact",
-    },
-  ];
+export default function Navbar() {
   return (
     <>
       <header className="header">
@@ -130,4 +88,3 @@ function Navbar({ cartCount, toggleCartVisibility }) {
     </>
   );
 }
-export default Navbar;

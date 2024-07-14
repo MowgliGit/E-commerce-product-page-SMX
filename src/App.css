@@ -279,7 +279,11 @@ a:link {
   padding: 10px;
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   row-gap: 30px;
+=======
+  row-gap: 29px;
+>>>>>>> 24288796cade1cb57f3396ffda149a0ab9c08ad0
 }
 .mainImage {
   width: 100%;
@@ -471,7 +475,11 @@ a:link {
 .boxWithButtons {
   display: flex;
   align-items: center;
+<<<<<<< HEAD
   gap: 20px;
+=======
+  gap: 19px;
+>>>>>>> 24288796cade1cb57f3396ffda149a0ab9c08ad0
 }
 .buttons {
   display: flex;
@@ -504,6 +512,10 @@ a:link {
   border: none;
   display: flex;
   justify-content: center;
+<<<<<<< HEAD
+=======
+  font-size: 16px;
+>>>>>>> 24288796cade1cb57f3396ffda149a0ab9c08ad0
 }
 .cardButton {
   fill: #fff !important;
