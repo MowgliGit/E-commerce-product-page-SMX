@@ -88,7 +88,7 @@ export default function Gallery() {
                     onClick={handleCloseLightbox}
                   >
                     <svg
-                      width="14"
+                      width="13"
                       height="15"
                       xmlns="http://www.w3.org/2000/svg"
                     >

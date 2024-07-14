@@ -53,20 +53,22 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Header
-        cartCount={cartCount}
-        toggleCartVisibility={toggleCartVisibility}
-      />
-      <Main addToCart={addToCart} />
-      {isCartVisible && (
-        <Card
-          cartItems={cartItems}
-          removeFromCart={removeFromCart}
-          handleCheckout={handleCheckout}
+    <>
+      <div className="App">
+        <Header
+          cartCount={cartCount}
+          toggleCartVisibility={toggleCartVisibility}
         />
-      )}
-    </div>
+        <Main addToCart={addToCart} />
+        {isCartVisible && (
+          <Card
+            cartItems={cartItems}
+            removeFromCart={removeFromCart}
+            handleCheckout={handleCheckout}
+          />
+        )}
+      </div>
+    </>
   );
 }
 
