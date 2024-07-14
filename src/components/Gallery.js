@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 export default function Gallery() {
   const [isDesktop, setDesktop] = useState(window.innerWidth > 768);
@@ -88,7 +88,7 @@ export default function Gallery() {
                     onClick={handleCloseLightbox}
                   >
                     <svg
-                      width="13"
+                      width="14"
                       height="15"
                       xmlns="http://www.w3.org/2000/svg"
                     >

@@ -279,7 +279,7 @@ a:link {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  row-gap: 29px;
 }
 .mainImage {
   width: 100%;

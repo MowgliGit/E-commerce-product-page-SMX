@@ -37,7 +37,7 @@ function Navbar({ cartCount, toggleCartVisibility }) {
     },
     {
       id: 5,
-      title: "Contact",
+      title: "Contacts",
       link: "#contacts",
     },
   ];
