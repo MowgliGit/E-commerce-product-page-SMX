@@ -49,6 +49,7 @@ function App() {
   const handleCheckout = () => {
     setIsCartVisible(false);
     setCartItems([]);
+    setCartCount(0);
   };
 
   return (

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 export default function Gallery() {
   const [isDesktop, setDesktop] = useState(window.innerWidth > 768);
